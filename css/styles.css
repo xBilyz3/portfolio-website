@@ -1,0 +1,370 @@
+/*
+Colors used
+
+text color : #2b2b2b;
+primary color : #357b70;
+secondary color : #e0b354;
+link color: #357b70,  link active color: #489c79, link visit: color: #05676e,
+border color: #e4e4e4
+
+Fonts used
+
+font-family: 'Montserrat', sans-serif
+font-family: 'Josefin Sans', sans-serif
+ */
+:root {
+  --primary-color: #357b70;
+  --secondary-color: #e0b354;
+  --primary-text-color: #2b2b2b;
+  --secondary-text-color: #fff;
+  --link-color: #357b70;
+  --visit-link-color: #05676e;
+  --active-link-color: #489c79;
+  --primary-button-bg-color: #357b70;
+  --secondary-button-bg-color: #e0b354;
+  --hover-button-bg-coler: #2b2b2b;
+  --input-bg-color: #f8f8f8;
+  --border-color: #e4e4e4;
+  --outline-color: #357b70;
+  --primary-font-size: 18px;
+  --button-font-size: 16px;
+  --primary-font-family: 'Montserrat', sans-serif;
+  --secondary-font-family: 'Josefin Sans', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--primary-text-color);
+  font-family: var(--primary-font-family);
+  font-size: var(--primary-font-size);
+  font-weight: 300;
+  line-height: 1.5;
+}
+
+h1 {
+  font-family: var(--secondary-font-family);
+  font-size: 40px;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: var(--secondary-font-family);
+  font-size: 20px;
+  font-weight: 400;
+}
+
+a {
+  color: var(--link-color);
+}
+
+a:visited {
+  color: var(--visit-link-color);
+}
+
+a:hover,
+a:focus {
+  /* No underlining when hovering over a link */
+  text-decoration: none;
+}
+
+a:active {
+  color: var(--active-link-color);
+}
+
+span {
+  background-color: var(--secondary-color);
+  padding: 5px;
+}
+
+.about, .contact, .work {
+  margin: 80px auto 50px auto;
+}
+
+/* page header */
+.page-header {
+  display: flex;
+  padding: 20px;
+  width: 100%;
+}
+
+nav.page-header__item {
+  flex: 0 1 200px;
+}
+
+img.page-header__item {
+  height: 100px;
+}
+
+.page-header__item:last-child {
+  flex-grow: 1;
+  font-size: var(--primary-font-size);
+  text-align: right;
+}
+
+.navigation-list {
+  list-style-type: none;
+}
+
+.navigation-list li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.navigation-list__item {
+  text-decoration: none;
+}
+
+.navigation-list__item--active {
+  text-decoration: underline;
+}
+
+/* page footer */
+.page-footer {
+  background-color: var(--primary-text-color);
+  color: var(--secondary-text-color);
+  clear: both;
+  flex-direction: column;
+  margin-top: 50px;
+  padding-top: 10px;
+  text-align: center;
+  width: 100%;
+}
+
+/* button */
+button,
+.button,
+.submit__button,
+.button__secondary {
+  background-color: var(--primary-button-bg-color);
+  border: none;
+  border-bottom: 3px solid rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  color: var(--secondary-text-color);
+  font-family: inherit;
+  font-size: var(--button-font-size);
+  font-weight: 400;
+  outline: none;
+  padding: 8px;
+  text-decoration: none;
+  transition-duration: 0.9s opacity, 0.9s background-color;
+}
+
+button:hover, button:focus,
+.button:hover, .button:focus,
+.submit__button:hover, .submit__button:focus {
+  /* lets the mouse appear as a hand when hovering over the button */
+  cursor: pointer;
+  background-color: var(--hover-button-bg-coler);
+}
+
+.default__button {
+  margin-top: 30px;
+}
+
+/* home page */
+.profile {
+  max-width: 700px;
+  margin: 0 auto;
+  margin-top: 80px;
+}
+
+.profile__portrait {
+  border-radius: 50%;
+  height: auto;
+  float: left;
+  margin-right: 40px;
+  max-width: 250px;
+  width: 100%;
+}
+
+/* work page*/
+.work {
+  padding-left: 20px;
+}
+
+/* Grid fallback*/
+.project-list__item {
+  display: inline-block;
+  width: 33%;
+}
+
+/* work page grid*/
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.project-list__item {
+  border: 2px solid var(--primary-color);
+  padding: 50px;
+  width: auto;
+}
+
+.project-list__item:first-child {
+  grid-column: 1 / 3;
+  grid-row: 1 / 1;
+}
+
+.project-list__item:hover {
+  background-color: var(--hover-button-bg-coler);
+  color: var(--secondary-text-color);
+}
+
+/* contact page */
+.contact {
+  max-width: 700px;
+  text-align: left;
+}
+
+.contact-page {
+  display: flex;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+#contact-form {
+  margin-left: 50px;
+}
+
+.full-name {
+  margin-top: 0px;
+}
+
+input,
+textarea {
+  background-color: var(--input-bg-color);
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  font-family: inherit;
+  font-weight: 200;
+  outline-color: var(--outline-color);
+  outline-width: medium;
+  padding-top: 10px;
+}
+
+/* about me page */
+.about-page {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-list {
+  list-style: none;
+  padding: 0px;
+}
+
+.city-graphic {
+  margin: 100px auto 0px auto;
+}
+
+.freepik {
+  font-size: 12px;
+  text-align: right;
+}
+
+.about-text {
+  margin-top: 50px;
+  text-align: justify;
+}
+
+table {
+  margin-top: 30px;
+}
+
+td,
+th {
+  padding-right: 50px;
+  text-align: left;
+}
+
+/* responsive design */
+@media all and (max-width: 750px) {
+  .project-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media all and (min-width: 750px) and (max-width: 900px) {
+  .project-list {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media all and (max-width: 900px) {
+  .project-list {
+    grid-gap: 10px;
+  }
+
+  .project-list__item:first-child {
+    grid-column: auto / auto;
+    grid-row: auto / auto;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+}
+
+/* keyframes */
+@keyframes color-change {
+  0% {
+    fill: #edc655;
+  }
+
+  50% {
+    fill: #edc655;
+  }
+
+  100% {
+    fill: #f76414;
+  }
+}
+
+.sun {
+  animation: 6s color-change infinite alternate linear;
+}
+
+@keyframes cloud-move {
+  from {
+    transform: translate(0, 0px);
+  }
+
+  to {
+    transform: translate(200px, 0px);
+  }
+}
+
+.cloud-back3,
+.cloud-back4,
+.cloud-back5 {
+  animation: 50s cloud-move infinite alternate linear;
+}
+
+.cloud-above3,
+.cloud-above4,
+.cloud-above5 {
+  animation: 100s cloud-move infinite alternate linear;
+}
+
+@keyframes cloud-move-reverse {
+  from {
+    transform: translate(-50px, 0px);
+  }
+
+  to {
+    transform: translate(-100px, 0px);
+  }
+}
+
+.cloud-front3,
+.cloud-front4,
+.cloud-front5 {
+  animation: 50s cloud-move-reverse infinite alternate linear;
+}
