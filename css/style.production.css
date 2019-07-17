@@ -12,9 +12,10 @@ Fonts used
 font-family: 'Montserrat', sans-serif
 font-family: 'Josefin Sans', sans-serif
  */
+
 * {
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 html {
@@ -86,8 +87,8 @@ span {
 
 nav.page-header__item {
   -webkit-box-flex: 0;
-  -ms-flex: 0 1 200px;
-  flex: 0 1 200px;
+      -ms-flex: 0 1 200px;
+          flex: 0 1 200px;
 }
 
 img.page-header__item {
@@ -96,8 +97,8 @@ img.page-header__item {
 
 .page-header__item:last-child {
   -webkit-box-flex: 1;
-  -ms-flex-positive: 1;
-  flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   font-size: 18px;
   text-align: right;
 }
@@ -144,7 +145,7 @@ button {
   padding: 8px;
   text-decoration: none;
   -webkit-transition-duration: 0.9s opacity, 0.9s background-color;
-  transition-duration: 0.9s opacity, 0.9s background-color;
+          transition-duration: 0.9s opacity, 0.9s background-color;
 }
 
 .button {
@@ -160,7 +161,7 @@ button {
   padding: 8px;
   text-decoration: none;
   -webkit-transition-duration: 0.9s opacity, 0.9s background-color;
-  transition-duration: 0.9s opacity, 0.9s background-color;
+          transition-duration: 0.9s opacity, 0.9s background-color;
 }
 
 .submit__button {
@@ -176,7 +177,7 @@ button {
   padding: 8px;
   text-decoration: none;
   -webkit-transition-duration: 0.9s opacity, 0.9s background-color;
-  transition-duration: 0.9s opacity, 0.9s background-color;
+          transition-duration: 0.9s opacity, 0.9s background-color;
 }
 
 .button__secondary {
@@ -192,7 +193,7 @@ button {
   padding: 8px;
   text-decoration: none;
   -webkit-transition-duration: 0.9s opacity, 0.9s background-color;
-  transition-duration: 0.9s opacity, 0.9s background-color;
+          transition-duration: 0.9s opacity, 0.9s background-color;
 }
 
 button:hover {
@@ -290,6 +291,8 @@ button:focus {
 .project-list__item:hover {
   background-color: #2b2b2b;
   color: #fff;
+  -webkit-transition-duration: 0.2s;
+          transition-duration: 0.2s;
 }
 
 /* contact page */
@@ -457,7 +460,6 @@ th {
     fill: #f76414;
   }
 }
-
 @keyframes color-change {
   0% {
     fill: #edc655;
@@ -474,30 +476,30 @@ th {
 
 .sun {
   -webkit-animation: 6s color-change infinite alternate linear;
-  animation: 6s color-change infinite alternate linear;
+          animation: 6s color-change infinite alternate linear;
 }
 
 @-webkit-keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 
   to {
     -webkit-transform: translate(200px, 0);
-    transform: translate(200px, 0);
+            transform: translate(200px, 0);
   }
 }
 
 @keyframes cloud-move {
   from {
     -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
+            transform: translate(0, 0);
   }
 
   to {
     -webkit-transform: translate(200px, 0);
-    transform: translate(200px, 0);
+            transform: translate(200px, 0);
   }
 }
 
@@ -505,37 +507,37 @@ th {
 .cloud-back4,
 .cloud-back5 {
   -webkit-animation: 50s cloud-move infinite alternate linear;
-  animation: 50s cloud-move infinite alternate linear;
+          animation: 50s cloud-move infinite alternate linear;
 }
 
 .cloud-above3,
 .cloud-above4,
 .cloud-above5 {
   -webkit-animation: 100s cloud-move infinite alternate linear;
-  animation: 100s cloud-move infinite alternate linear;
+          animation: 100s cloud-move infinite alternate linear;
 }
 
 @-webkit-keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(-50px, 0);
-    transform: translate(-50px, 0);
+            transform: translate(-50px, 0);
   }
 
   to {
     -webkit-transform: translate(-100px, 0);
-    transform: translate(-100px, 0);
+            transform: translate(-100px, 0);
   }
 }
 
 @keyframes cloud-move-reverse {
   from {
     -webkit-transform: translate(-50px, 0);
-    transform: translate(-50px, 0);
+            transform: translate(-50px, 0);
   }
 
   to {
     -webkit-transform: translate(-100px, 0);
-    transform: translate(-100px, 0);
+            transform: translate(-100px, 0);
   }
 }
 
@@ -543,5 +545,5 @@ th {
 .cloud-front4,
 .cloud-front5 {
   -webkit-animation: 50s cloud-move-reverse infinite alternate linear;
-  animation: 50s cloud-move-reverse infinite alternate linear;
+          animation: 50s cloud-move-reverse infinite alternate linear;
 }

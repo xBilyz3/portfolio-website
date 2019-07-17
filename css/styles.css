@@ -227,6 +227,7 @@ button:focus,
 .project-list__item:hover {
   background-color: var(--hover-button-bg-coler);
   color: var(--secondary-text-color);
+  transition-duration: 0.2s;
 }
 
 /* contact page */
