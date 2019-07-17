@@ -12,10 +12,9 @@ Fonts used
 font-family: 'Montserrat', sans-serif
 font-family: 'Josefin Sans', sans-serif
  */
-
 * {
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
@@ -30,7 +29,6 @@ body {
   line-height: 1.5;
   margin: 0;
   min-height: 100%;
-  padding-bottom: 80px;
   position: relative;
 }
 
@@ -56,10 +54,6 @@ a {
   color: #357b70;
 }
 
-a:visited {
-  color: #05676e;
-}
-
 a:hover,
 a:focus {
   /* No underlining when hovering over a link */
@@ -75,8 +69,10 @@ span {
   padding: 5px;
 }
 
-.about, .contact, .work {
-  margin: 80px auto 50px auto;
+.about,
+.contact,
+.work {
+  margin: 80px auto 20px;
 }
 
 /* page header */
@@ -90,8 +86,8 @@ span {
 
 nav.page-header__item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 200px;
-          flex: 0 1 200px;
+  -ms-flex: 0 1 200px;
+  flex: 0 1 200px;
 }
 
 img.page-header__item {
@@ -100,8 +96,8 @@ img.page-header__item {
 
 .page-header__item:last-child {
   -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
   font-size: 18px;
   text-align: right;
 }
@@ -148,8 +144,9 @@ button {
   padding: 8px;
   text-decoration: none;
   -webkit-transition-duration: 0.9s opacity, 0.9s background-color;
-          transition-duration: 0.9s opacity, 0.9s background-color;
+  transition-duration: 0.9s opacity, 0.9s background-color;
 }
+
 .button {
   background-color: #357b70;
   border: none;
@@ -163,8 +160,9 @@ button {
   padding: 8px;
   text-decoration: none;
   -webkit-transition-duration: 0.9s opacity, 0.9s background-color;
-          transition-duration: 0.9s opacity, 0.9s background-color;
+  transition-duration: 0.9s opacity, 0.9s background-color;
 }
+
 .submit__button {
   background-color: #357b70;
   border: none;
@@ -178,8 +176,9 @@ button {
   padding: 8px;
   text-decoration: none;
   -webkit-transition-duration: 0.9s opacity, 0.9s background-color;
-          transition-duration: 0.9s opacity, 0.9s background-color;
+  transition-duration: 0.9s opacity, 0.9s background-color;
 }
+
 .button__secondary {
   background-color: #357b70;
   border: none;
@@ -193,7 +192,7 @@ button {
   padding: 8px;
   text-decoration: none;
   -webkit-transition-duration: 0.9s opacity, 0.9s background-color;
-          transition-duration: 0.9s opacity, 0.9s background-color;
+  transition-duration: 0.9s opacity, 0.9s background-color;
 }
 
 button:hover {
@@ -252,18 +251,18 @@ button:focus {
   width: 100%;
 }
 
-/* work page*/
+/* work page */
 .work {
   padding-left: 20px;
 }
 
-/* Grid fallback*/
+/* Grid fallback */
 .project-list__item {
   display: inline-block;
   width: 33%;
 }
 
-/* work page grid*/
+/* work page grid */
 .project-list {
   display: -ms-grid;
   display: grid;
@@ -307,12 +306,12 @@ button:focus {
   margin: 0 auto;
 }
 
-#contact-form {
-  margin-left: 50px;
+.address {
+  margin-right: 50px;
 }
 
 .full-name {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 input {
@@ -346,11 +345,11 @@ textarea {
 
 .about-list {
   list-style: none;
-  padding: 0px;
+  padding: 0;
 }
 
 .city-graphic {
-  margin: 100px auto 0px auto;
+  margin: 100px auto 0;
 }
 
 .freepik {
@@ -374,14 +373,32 @@ th {
 }
 
 /* responsive design */
-@media all and (max-width: 750px) {
+@media all and (max-width: 600px) {
+  .profile__portrait {
+    float: none;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .profile {
+    max-width: 250px;
+  }
+}
+
+@media all and (min-width: 600px) and (max-width: 750px) {
+  .profile {
+    margin: 80px 20px auto;
+  }
+}
+
+@media all and (max-width: 600px) {
   .project-list {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
   }
 }
 
-@media all and (min-width: 750px) and (max-width: 900px) {
+@media all and (min-width: 600px) and (max-width: 900px) {
   .project-list {
     -ms-grid-columns: 1fr 20px 1fr;
     grid-template-columns: 1fr 1fr;
@@ -397,9 +414,32 @@ th {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+}
 
-  h1 {
-    font-size: 22px;
+@media all and (max-width: 600px) {
+  .contact-page,
+  .about-page {
+    display: block;
+    margin: auto 20px;
+  }
+}
+
+@media all and (min-width: 600px) and (max-width: 750px) {
+  .contact-page,
+  .about-page {
+    margin: auto 20px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .contact {
+    margin: 80px 20px 50px;
+  }
+}
+
+@media all and (min-width: 600px) and (max-width: 750px) {
+  .contact {
+    margin: 80px 20px 50px;
   }
 }
 
@@ -417,6 +457,7 @@ th {
     fill: #f76414;
   }
 }
+
 @keyframes color-change {
   0% {
     fill: #edc655;
@@ -433,30 +474,30 @@ th {
 
 .sun {
   -webkit-animation: 6s color-change infinite alternate linear;
-          animation: 6s color-change infinite alternate linear;
+  animation: 6s color-change infinite alternate linear;
 }
 
 @-webkit-keyframes cloud-move {
   from {
-    -webkit-transform: translate(0, 0px);
-            transform: translate(0, 0px);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 
   to {
-    -webkit-transform: translate(200px, 0px);
-            transform: translate(200px, 0px);
+    -webkit-transform: translate(200px, 0);
+    transform: translate(200px, 0);
   }
 }
 
 @keyframes cloud-move {
   from {
-    -webkit-transform: translate(0, 0px);
-            transform: translate(0, 0px);
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
   }
 
   to {
-    -webkit-transform: translate(200px, 0px);
-            transform: translate(200px, 0px);
+    -webkit-transform: translate(200px, 0);
+    transform: translate(200px, 0);
   }
 }
 
@@ -464,37 +505,37 @@ th {
 .cloud-back4,
 .cloud-back5 {
   -webkit-animation: 50s cloud-move infinite alternate linear;
-          animation: 50s cloud-move infinite alternate linear;
+  animation: 50s cloud-move infinite alternate linear;
 }
 
 .cloud-above3,
 .cloud-above4,
 .cloud-above5 {
   -webkit-animation: 100s cloud-move infinite alternate linear;
-          animation: 100s cloud-move infinite alternate linear;
+  animation: 100s cloud-move infinite alternate linear;
 }
 
 @-webkit-keyframes cloud-move-reverse {
   from {
-    -webkit-transform: translate(-50px, 0px);
-            transform: translate(-50px, 0px);
+    -webkit-transform: translate(-50px, 0);
+    transform: translate(-50px, 0);
   }
 
   to {
-    -webkit-transform: translate(-100px, 0px);
-            transform: translate(-100px, 0px);
+    -webkit-transform: translate(-100px, 0);
+    transform: translate(-100px, 0);
   }
 }
 
 @keyframes cloud-move-reverse {
   from {
-    -webkit-transform: translate(-50px, 0px);
-            transform: translate(-50px, 0px);
+    -webkit-transform: translate(-50px, 0);
+    transform: translate(-50px, 0);
   }
 
   to {
-    -webkit-transform: translate(-100px, 0px);
-            transform: translate(-100px, 0px);
+    -webkit-transform: translate(-100px, 0);
+    transform: translate(-100px, 0);
   }
 }
 
@@ -502,5 +543,5 @@ th {
 .cloud-front4,
 .cloud-front5 {
   -webkit-animation: 50s cloud-move-reverse infinite alternate linear;
-          animation: 50s cloud-move-reverse infinite alternate linear;
+  animation: 50s cloud-move-reverse infinite alternate linear;
 }

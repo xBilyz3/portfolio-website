@@ -48,7 +48,6 @@ body {
   line-height: 1.5;
   margin: 0;
   min-height: 100%;
-  padding-bottom: 80px;
   position: relative;
 }
 
@@ -71,11 +70,7 @@ h2 {
 }
 
 a {
-  color: var(--link-color);
-}
-
-a:visited {
-  color: var(--visit-link-color);
+  color: var(--primary-color);
 }
 
 a:hover,
@@ -93,8 +88,10 @@ span {
   padding: 5px;
 }
 
-.about, .contact, .work {
-  margin: 80px auto 50px auto;
+.about,
+.contact,
+.work {
+  margin: 80px auto 20px;
 }
 
 /* page header */
@@ -165,9 +162,12 @@ button,
   transition-duration: 0.9s opacity, 0.9s background-color;
 }
 
-button:hover, button:focus,
-.button:hover, .button:focus,
-.submit__button:hover, .submit__button:focus {
+button:hover,
+button:focus,
+.button:hover,
+.button:focus,
+.submit__button:hover,
+.submit__button:focus {
   /* lets the mouse appear as a hand when hovering over the button */
   cursor: pointer;
   background-color: var(--hover-button-bg-coler);
@@ -193,18 +193,18 @@ button:hover, button:focus,
   width: 100%;
 }
 
-/* work page*/
+/* work page */
 .work {
   padding-left: 20px;
 }
 
-/* Grid fallback*/
+/* Grid fallback */
 .project-list__item {
   display: inline-block;
   width: 33%;
 }
 
-/* work page grid*/
+/* work page grid */
 .project-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -241,12 +241,12 @@ button:hover, button:focus,
   margin: 0 auto;
 }
 
-#contact-form {
-  margin-left: 50px;
+.address {
+  margin-right: 50px;
 }
 
 .full-name {
-  margin-top: 0px;
+  margin-top: 0;
 }
 
 input,
@@ -270,11 +270,11 @@ textarea {
 
 .about-list {
   list-style: none;
-  padding: 0px;
+  padding: 0;
 }
 
 .city-graphic {
-  margin: 100px auto 0px auto;
+  margin: 100px auto 0;
 }
 
 .freepik {
@@ -298,13 +298,31 @@ th {
 }
 
 /* responsive design */
-@media all and (max-width: 750px) {
+@media all and (max-width: 600px) {
+  .profile__portrait {
+    float: none;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .profile {
+    max-width: 250px;
+  }
+}
+
+@media all and (min-width: 600px) and (max-width: 750px) {
+  .profile {
+    margin: 80px 20px auto;
+  }
+}
+
+@media all and (max-width: 600px) {
   .project-list {
     grid-template-columns: 1fr;
   }
 }
 
-@media all and (min-width: 750px) and (max-width: 900px) {
+@media all and (min-width: 600px) and (max-width: 900px) {
   .project-list {
     grid-template-columns: 1fr 1fr;
   }
@@ -319,9 +337,32 @@ th {
     grid-column: auto / auto;
     grid-row: auto / auto;
   }
+}
 
-  h1 {
-    font-size: 22px;
+@media all and (max-width: 600px) {
+  .contact-page,
+  .about-page {
+    display: block;
+    margin: auto 20px;
+  }
+}
+
+@media all and (min-width: 600px) and (max-width: 750px) {
+  .contact-page,
+  .about-page {
+    margin: auto 20px;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .contact {
+    margin: 80px 20px 50px;
+  }
+}
+
+@media all and (min-width: 600px) and (max-width: 750px) {
+  .contact {
+    margin: 80px 20px 50px;
   }
 }
 
@@ -346,11 +387,11 @@ th {
 
 @keyframes cloud-move {
   from {
-    transform: translate(0, 0px);
+    transform: translate(0, 0);
   }
 
   to {
-    transform: translate(200px, 0px);
+    transform: translate(200px, 0);
   }
 }
 
@@ -368,11 +409,11 @@ th {
 
 @keyframes cloud-move-reverse {
   from {
-    transform: translate(-50px, 0px);
+    transform: translate(-50px, 0);
   }
 
   to {
-    transform: translate(-100px, 0px);
+    transform: translate(-100px, 0);
   }
 }
 
