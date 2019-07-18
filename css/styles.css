@@ -194,6 +194,10 @@ button:focus,
 }
 
 /* work page */
+.work-page {
+  margin-bottom: 20px;
+}
+
 .work {
   padding-left: 20px;
 }
