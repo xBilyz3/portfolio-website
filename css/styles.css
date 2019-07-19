@@ -159,7 +159,7 @@ button,
   outline: none;
   padding: 8px;
   text-decoration: none;
-  transition-duration: 0.9s opacity, 0.9s background-color;
+  transition-duration: 0.5s;
 }
 
 button:hover,
